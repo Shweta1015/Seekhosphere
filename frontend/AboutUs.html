@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About Us | SeekhoSphere</title>
+  <link rel="stylesheet" href="../Css/AboutUs.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"/>
+</head>
+<body onload="updateNavBar()">
+  <!-- Navbar -->
+  <nav>
+    <div class="logo">
+            <i class="fas fa-graduation-cap"></i>
+            <h1>SeekhoSphere</h1>
+        </div>
+        <div class="nav__menu" id="menuToggle" onclick="toggleMenu()">
+            <div class="nav__link">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
+        <ul class="nav__links" id="navLinks">
+            <li class="link"><a href="index.html"><i class="fas fa-home"></i> Home</a></li>
+            <li class="link"><a href="Courses.html"><i class="fas fa-book"></i> Courses</a></li>
+            <li class="link"><a href="Library.html"><i class="fas fa-bookmark"></i> Library</a></li>
+            <li class="link"><a href="Signin.html" class="nav__btn" id = "authButton"><i class="fas fa-user-plus"></i> Sign In</a></li>
+        </ul>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="about-hero">
+    <div class="overlay">
+      <!-- <h1>OUR STORY</h1> -->
+    </div>
+  </section>
+
+  <!-- About Content -->
+  <section class="about-content">
+    <h2>LEARNING IS OUR MISSION</h2>
+    <p>
+      We’re a modern-day e-learning platform on a mission to make knowledge accessible, free, and structured.
+      At SeekhoSphere, we organize YouTube educational content into systematic playlists—making your self-learning journey easier, faster, and smarter.
+    </p>
+
+    <div class="features">
+      <div class="feature-item">
+        <i class="fas fa-layer-group fa-2x"></i>
+        <h3>Wide Range of Subjects</h3>
+      </div>
+      <div class="feature-item">
+        <i class="fas fa-lightbulb fa-2x"></i>
+        <h3>Smart & Structured Learning</h3>
+      </div>
+      <div class="feature-item">
+        <i class="fa-solid fa-robot fa-2x"></i>
+        <h3>Helping Assistant</h3>
+      </div>
+    </div>
+  </section>
+
+  <script>
+        function toggleMenu(){
+          let navLinks = document.getElementById("navLinks");
+          navLinks.classList.toggle("active");
+        }
+      </script>
+    <script src="../Jsp/AboutPage.js"></script>
+    <script src="../Jsp/Auth.js"></script>
+</body>
+</html>

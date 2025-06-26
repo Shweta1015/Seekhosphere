@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>OTP Verification</title>
+  <link rel="stylesheet" href="../Css/EnterOtp.css" />
+  <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet"/>
+</head>
+<body>
+  <div class="container">
+    <div class="form-box login">
+      <form id="otp-form">
+        <h1>Verify OTP</h1>
+        <p>Enter the 6-digit code sent to your email</p>
+
+        <div class="otp-container">
+          <input type="text" maxlength="1">
+          <input type="text" maxlength="1">
+          <input type="text" maxlength="1">
+          <input type="text" maxlength="1">
+          <input type="text" maxlength="1">
+          <input type="text" maxlength="1">
+        </div>
+
+        <div class="forgot-link">
+          <a href="forget.html">&larr; Go back and edit</a>
+        </div>
+
+        <button type="submit" class="continue">Continue</button>
+        <div class="resend-link">
+          <a href="#">Resend Code</a>
+        </div>
+      </form>
+    </div>
+
+    <div class="toggle-box">
+      <div class="toggle-panel toggle-left">
+        <h1>SeekhoSphere</h1>
+        <p>Enter OTP to continue...</p>
+      </div>
+    </div>
+  </div>
+
+  <script src="../Jsp/enterOtp.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</body>
+</html>

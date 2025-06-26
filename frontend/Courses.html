@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Courses</title>
+    <link rel="stylesheet" href="../Css/Courses.css" />
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+        integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  </head>
+  <body onload="updateNavBar()">
+    <!-- Navbar -->
+    <nav>
+      <div class="logo">
+        <i class="fas fa-graduation-cap"></i>
+        <h1>SeekhoSphere</h1>
+      </div>
+      <div class="nav__menu" id="menuToggle" onclick="toggleMenu()">
+        <div class="nav__link">
+          <i class="fas fa-bars"></i>
+        </div>
+      </div>
+      <ul class="nav__links" id="navLinks">
+        <li class="link"><a href="index.html"><i class="fas fa-home"></i> Home</a></li>
+        <li class="link"><a href="Library.html"><i class="fas fa-bookmark"></i> Library</a></li>
+        <li class="link"><a href="chatBot.html"><i class="fa-solid fa-robot"></i> Chatbot</a></li>
+        <li class="link"><a href="AboutUs.html"><i class="fas fa-info-circle"></i> About Us</a></li>
+        <li class="link"><a href="#" class="nav__btn" id = "authButton"><i class="fas fa-user-plus"></i> Sign In</a></li>
+      </ul>
+    </nav>
+
+    <section class="courses">
+      <h2>Available Courses</h2>
+  
+      <!-- SSC Courses Section -->
+      <h3>SSC Courses</h3>
+      <div class="card-container">
+          <div class="card">
+              <div class="card-inner">
+                  <div class="card-front">
+                      <img src="https://images.unsplash.com/photo-1509228468518-180dd4864904?w=500" alt="Mathematics">
+                      <h3>Mathematics</h3>
+                  </div>
+                  <div class="card-back">
+                      <h3>Mathematics</h3>
+                      <p>Learn Algebra, Geometry, Trigonometry, and more.</p>
+                      <button class="enroll-btn" data-subject="Mathematics" data-level="SSC">Enroll Now</button>
+                  </div>
+              </div>
+          </div>
+          
+          <div class="card">
+              <div class="card-inner">
+                  <div class="card-front">
+                      <img src="https://images.unsplash.com/photo-1635070041078-e363dbe005cb?w=500" alt="Physics">
+                      <h3>Physics</h3>
+                  </div>
+                  <div class="card-back">
+                      <h3>Physics</h3>
+                      <p>Understand Motion, Electricity, and Laws of Physics.</p>
+                      <button class="enroll-btn" data-subject="Physics" data-level="SSC">Enroll Now</button>
+                  </div>
+              </div>
+          </div>
+  
+          <div class="card">
+              <div class="card-inner">
+                  <div class="card-front">
+                      <img src="https://images.unsplash.com/photo-1693919653649-27492e78899d?q=80&w=1632&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Chemistry">
+                      <h3>Chemistry</h3>
+                  </div>
+                  <div class="card-back">
+                      <h3>Chemistry</h3>
+                      <p>Learn Organic, Inorganic, and Physical Chemistry.</p>
+                      <button class="enroll-btn" data-subject="Chemistry" data-level="SSC">Enroll Now</button>
+                  </div>
+              </div>
+          </div>
+  
+          <div class="card">
+              <div class="card-inner">
+                  <div class="card-front">
+                      <img src="https://img.freepik.com/free-photo/3d-medical-background-with-virus-cells-dna-strand_1048-8470.jpg?w=500" alt="Biology">
+                      <h3>Biology</h3>
+                  </div>
+                  <div class="card-back">
+                      <h3>Biology</h3>
+                      <p>Explore Human Anatomy, Botany, and Microbiology.</p>
+                      <button class="enroll-btn" data-subject="Biology" data-level="SSC">Enroll Now</button>
+                  </div>
+              </div>
+          </div>
+      </div>
+  
+      <!-- HSC Courses Section -->
+      <h3>HSC Courses</h3>
+      <div class="card-container">
+          <div class="card">
+              <div class="card-inner">
+                  <div class="card-front">
+                      <img src="https://img.freepik.com/free-photo/atom-science-biotechnology-blue-neon-graphic_53876-163014.jpg?w=500" alt="Physics">
+                      <h3>Physics</h3>
+                  </div>
+                  <div class="card-back">
+                      <h3>Physics</h3>
+                      <p>Advanced concepts in Electromagnetism, Optics, and Mechanics.</p>
+                      <button class="enroll-btn" data-subject="Physics" data-level="HSC">Enroll Now</button>
+                  </div>
+              </div>
+          </div>
+  
+          <div class="card">
+              <div class="card-inner">
+                  <div class="card-front">
+                      <img src="https://img.freepik.com/premium-photo/perfumery-production-laboratory-perfume-bottles-liquid-essence-oil-with-molecule-generative-ai_379824-22.jpg?w=500" alt="Chemistry">
+                      <h3>Chemistry</h3>
+                  </div>
+                  <div class="card-back">
+                      <h3>Chemistry</h3>
+                      <p>Study Organic Chemistry, Bonding, and Thermodynamics.</p>
+                      <button class="enroll-btn" data-subject="Chemistry" data-level="HSC">Enroll Now</button>
+                  </div>
+              </div>
+          </div>
+  
+          <div class="card">
+              <div class="card-inner">
+                  <div class="card-front">
+                      <img src="https://img.freepik.com/free-photo/3d-representation-dna_23-2150471457.jpg?w=500" alt="Biology">
+                      <h3>Biology</h3>
+                  </div>
+                  <div class="card-back">
+                      <h3>Biology</h3>
+                      <p>Dive into Genetics, Evolution, and Biotechnology.</p>
+                      <button class="enroll-btn" data-subject="Biology" data-level="HSC">Enroll Now</button>
+                  </div>
+              </div>
+          </div>
+  
+          <div class="card">
+              <div class="card-inner">
+                  <div class="card-front">
+                      <img src="https://img.freepik.com/free-vector/mathematical-geometric-background-vector-gradient-blue-education-remix_53876-114100.jpg?w=500" alt="Mathematics">
+                      <h3>Mathematics</h3>
+                  </div>
+                  <div class="card-back">
+                      <h3>Mathematics</h3>
+                      <p>Master Calculus, Probability, and Complex Numbers.</p>
+                      <button class="enroll-btn" data-subject="Mathematics" data-level="HSC">Enroll Now</button>
+                  </div>
+              </div>
+          </div>
+      </div>
+  
+      <!-- Technical Courses Section -->
+       <h3>Languages</h3>
+       <div class="card-container">
+        <div class="card">
+            <div class="card-inner">
+                <div class="card-front">
+                    <img src="/src/images/Java logo.jpg" alt="Web Development">
+                    <h3>Java</h3>
+                </div>
+                <div class="card-back">
+                    <h3>Java Development</h3>
+                    <p>Master Java fundamentals, OOP concepts, exception handling, collections, multithreading. </p>
+                    <button class="enroll-btn" data-subject="Java" data-level="Technical">Enroll Now</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="card-inner">
+                <div class="card-front">
+                    <img src="https://img.freepik.com/premium-psd/python-programing-language-icon-3d-rendering-vector-illustration_743950-5619.jpg?ga=GA1.1.32436173.1689642071&semt=ais_hybrid&w=740" alt="Web Development">
+                    <h3>Python</h3>
+                </div>
+                <div class="card-back">
+                    <h3>Python Development</h3>
+                    <p>covering syntax, data structures, OOP, file handling, and powerful libraries like NumPy and Pandas</p>
+                    <button class="enroll-btn" data-subject="Python" data-level="Technical">Enroll Now</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="card-inner">
+                <div class="card-front">
+                    <img src="/src/images/JavaScript.png" alt="Web Development">
+                    <h3>JavaScript</h3>
+                </div>
+                <div class="card-back">
+                    <h3>JavaScript Development</h3>
+                    <p>Master JavaScript fundamentals, DOM manipulation, ES6 features, and asynchronous programming to build dynamic</p>
+                    <button class="enroll-btn" data-subject="JavaScript" data-level="Technical">Enroll Now</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="card-inner">
+                <div class="card-front">
+                    <img src="/src/images/c.png" alt="Web Development">
+                    <h3>C Programming</h3>
+                </div>
+                <div class="card-back">
+                    <h3>C Programming</h3>
+                    <p>Learn core programming concepts with C — including memory management, pointers, and data structures</p>
+                    <button class="enroll-btn" data-subject="C_Programming" data-level="Technical">Enroll Now</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="card-inner">
+                <div class="card-front">
+                    <img src="/src/images/c++.png" alt="Web Development">
+                    <h3>C++ Programming</h3>
+                </div>
+                <div class="card-back">
+                    <h3>C++ Programming</h3>
+                    <p>Master object-oriented programming, STL (Standard Template Library), and advanced concepts in C++</p>
+                    <button class="enroll-btn" data-subject="Cpp_Programming" data-level="Technical">Enroll Now</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="card-inner">
+                <div class="card-front">
+                    <img src="/src/images/dsaC.jpg" alt="Web Development">
+                    <h3>DSA in C++</h3>
+                </div>
+                <div class="card-back">
+                    <h3>DSA in C++</h3>
+                    <p>Build a deep understanding of algorithms and data structures in C++, including recursion, dynamic programming, trees, graphs, and more</p>
+                    <button class="enroll-btn" data-subject="Dsa_in_Cpp" data-level="Technical">Enroll Now</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="card-inner">
+                <div class="card-front">
+                    <img src="/src/images/dsaC.jpg" alt="Web Development">
+                    <h3>DSA in Java</h3>
+                </div>
+                <div class="card-back">
+                    <h3>DSA in Java</h3>
+                    <p>Strengthen your coding skills by mastering data structures and algorithms using Java — ideal for coding interviews, competitive programming, and real-world problem-solving.</p>
+                    <button class="enroll-btn" data-subject="Dsa_in_Java" data-level="Technical">Enroll Now</button>
+                </div>
+            </div>
+        </div>
+
+       </div>
+      <h3>Technical Courses</h3>
+      <div class="card-container">
+          <div class="card">
+              <div class="card-inner">
+                  <div class="card-front">
+                      <img src="https://images.unsplash.com/photo-1547658719-da2b51169166?w=500" alt="Web Development">
+                      <h3>Web Development</h3>
+                  </div>
+                  <div class="card-back">
+                      <h3>Web Development</h3>
+                      <p>Master HTML, CSS, JavaScript, and frameworks like React & Node.js.</p>
+                      <button class="enroll-btn" data-subject="Web_Development" data-level="Technical">Enroll Now</button>
+                  </div>
+              </div>
+            </div>
+  
+          <div class="card">
+              <div class="card-inner">
+                  <div class="card-front">
+                      <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=500" alt="Data Science">
+                      <h3>Data Analytics</h3>
+                  </div>
+                  <div class="card-back">
+                      <h3>Data Analytics</h3>
+                      <p>Learn to analyze, interpret, and visualize data using tools like Excel, SQL, Python, and Power BI</p>
+                      <button class="enroll-btn" data-subject="Data_Analytics" data-level="Technical">Enroll Now</button>
+                  </div>
+              </div>
+          </div>
+  
+          <div class="card">
+              <div class="card-inner">
+                  <div class="card-front">
+                      <img src="https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?w=500" alt="Cybersecurity">
+                      <h3>Cybersecurity</h3>
+                  </div>
+                  <div class="card-back">
+                      <h3>Cybersecurity</h3>
+                      <p>Learn Network Security, Ethical Hacking, and Security Protocols.</p>
+                      <button class="enroll-btn" data-subject="Cyber_Security" data-level="Technical">Enroll Now</button>
+                  </div>
+              </div>
+          </div>
+  
+          <div class="card">
+              <div class="card-inner">
+                  <div class="card-front">
+                      <img src="https://images.unsplash.com/photo-1485827404703-89b55fcc595e?w=500" alt="Artificial Intelligence">
+                      <h3>Machine Learning</h3>
+                  </div>
+                  <div class="card-back">
+                      <h3>Machine Learning</h3>
+                      <p>Explore Deep Learning, Neural Networks, and AI Applications.</p>
+                      <button class="enroll-btn" data-subject="Machine_Learning" data-level="Technical">Enroll Now</button>
+
+                  </div>
+              </div>
+          </div>
+
+          <div class="card">
+            <div class="card-inner">
+                <div class="card-front">
+                    <img src="https://img.freepik.com/free-vector/cloud-services-isometric-composition-with-big-cloud-computing-infrastructure-elements-connected-with-dashed-lines-vector-illustration_1284-30495.jpg?ga=GA1.1.32436173.1689642071&semt=ais_hybrid&w=740" alt="Mobile App Development">
+                    <h3>Cloud Computing</h3>
+                </div>
+                <div class="card-back">
+                    <h3>Cloud Computing</h3>
+                    <p>Understand the fundamentals of cloud platforms like AWS, Azure, and Google Cloud — learn how to deploy, manage, and scale applications</p>
+                    <button class="enroll-btn" data-subject="Cloud_Computing" data-level="Technical">Enroll Now</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="card">
+          <div class="card-inner">
+              <div class="card-front">
+                  <img src="https://images.unsplash.com/photo-1555949963-aa79dcee981c?w=500" alt="UI/UX Design">
+                  <h3>UI/UX Design</h3>
+              </div>
+              <div class="card-back">
+                  <h3>UI/UX Design</h3>
+                  <p>Learn user interface design, user experience, and prototyping</p>
+                  <button class="enroll-btn" data-subject="UI_UX_Design" data-level="Technical">Enroll Now</button>
+              </div>
+          </div>
+      </div>
+      </div>
+  </section>
+  
+    <script>
+      function toggleMenu(){
+        let navLinks = document.getElementById("navLinks");
+        navLinks.classList.toggle("active");
+      }
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="../Jsp/Courses.js"></script>
+    <script src="../Jsp/Auth.js"></script>
+    <script src="../Jsp/index.js"></script>
+  </body>
+</html>

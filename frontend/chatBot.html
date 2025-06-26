@@ -1,0 +1,55 @@
+<html>
+<head>
+	<title>Chatbot Frontend</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+	<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Josefin+Sans:300|Open+Sans:300|Oxygen|Material+Icons"
+		rel="stylesheet">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+
+	<link rel="stylesheet" type="text/css" href="../Css/chatBot.css">
+</head>
+<body onload="updateNavBar()">
+	<div class="container">
+		<div class="row padded_row">
+			<!-- right side content -->
+			<div class="chat_window_wrapper">
+					<div class="chat_window">
+
+					<div class="top_menu">
+						<div class="title">Helping Assistant</div>
+					</div>
+
+					<!-- dynamically rendered -->
+					<ul class="messages"></ul>
+
+					<!-- input -->
+					<div class="bottom_wrapper">
+						<input id="msg_input" placeholder="Say Hi to begin chat..." />
+						<div id="send_button" class="app_button_1">Send</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- vendor script files -->
+	<script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js">
+	</script>
+
+	<!-- <script>
+      function toggleMenu(){
+        let navLinks = document.getElementById("navLinks");
+        navLinks.classList.toggle("active");
+      }
+    </script> -->
+	<script src="../Jsp/chatBot.js"></script>
+	<script src="../Jsp/Auth.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</body>
+
+</html>

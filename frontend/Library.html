@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Library</title>
+    <link rel="stylesheet" href="../Css/library.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body onload="updateNavBar(); fetchLibraryPlaylists();">
+    <!-- Navbar -->
+    <nav>
+        <div class="logo">
+            <i class="fas fa-graduation-cap"></i>
+            <h1>SeekhoSphere</h1>
+        </div>
+        <div class="nav__menu" id="menuToggle" onclick="toggleMenu()">
+            <div class="nav__link">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
+        <ul class="nav__links" id="navLinks">
+            <li class="link"><a href="index.html"><i class="fas fa-home"></i> Home</a></li>
+            <li class="link"><a href="Courses.html"><i class="fas fa-book"></i> Courses</a></li>
+            <li class="link"><a href="chatBot.html"><i class="fa-solid fa-robot"></i> Chatbot</a></li>
+            <li class="link"><a href="AboutUs.html"><i class="fas fa-info-circle"></i> About Us</a></li>
+            <li class="link"><a href="#" class="nav__btn" id="authButton"><i class="fas fa-user-plus"></i> Sign In</a></li>
+        </ul>
+    </nav>
+
+     <!-- Page Content -->
+   <section class="playlist-container">
+    <h2 id="subject-title">My Library</h2>
+    <div class="playlist-grid" id="playlistGrid">
+      <!-- Saved playlists will be displayed here -->
+    </div>
+  </section>
+   
+  <script>
+    function toggleMenu(){
+      let navLinks = document.getElementById("navLinks");
+      navLinks.classList.toggle("active");
+    }
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  <script src="../Jsp/Auth.js"></script>
+<script src="../Jsp/library.js"></script>
+<script src="../Jsp/index.js"></script>
+</body>
+</html>

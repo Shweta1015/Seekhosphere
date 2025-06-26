@@ -1,0 +1,207 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
+
+:root {
+    --primary-color: #5c48ee;
+    --primary-color-dark: #0f1e6a;
+    --secondary-color: #f9fafe;
+    --text-color: #333;
+    --white: #ffffff;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Poppins", sans-serif;
+    background-color: var(--white);
+}
+
+nav {
+    max-width: 100%;
+    margin: auto;
+    padding: 1rem;
+    height: 100px;
+    background: var(--primary-color);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.logo i {
+    font-size: 2rem;
+    color: #fff;
+}
+
+.logo h1 {
+    font-size: 1.8rem;
+    font-weight: 600;
+    background: linear-gradient(45deg, #fff, #e3f2fd);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+/* Hamburger menu icon */
+.nav__menu {
+    display: none;
+    font-size: 1.8rem;
+    cursor: pointer;
+    color: var(--white);
+}
+
+.nav__links {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+/* Mobile-specific styles */
+@media (max-width: 800px){
+  .nav__menu{
+    display: block;
+  }
+
+  .nav__links {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 100%;
+    right: 1px;
+    background-color: var(--primary-color);
+    padding: 10px 0;
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
+    z-index: 1000;
+  }
+
+  .nav__links.show{
+    display: flex;
+  }
+  
+  .nav__links li {
+    padding: 10px;
+    text-align: center;
+    list-style: none;
+  }
+  
+  .nav__links a {
+    text-decoration: none;
+    color: var(--white);
+    display: block;
+  }
+}
+
+.link a {
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+    font-weight: 500;
+    color: var(--white);
+    text-decoration: none;
+    display: inline-block;
+  transition: transform 0.3s ease, font-size 0.3s ease;
+}
+
+.link a:hover, .link a:focus {
+  transform: scale(1);
+  font-size: 1.2rem;
+}
+
+.link a:active{
+  transform: scale(0.9);
+  color: var(--white);
+}
+
+.link .nav__btn {
+  padding: 0.5rem 2rem;
+  color: var(--white) !important;
+  background-color: var(--primary-color-dark);
+  border-radius: 5px;
+}
+
+.link .nav__btn:hover {
+  background-color: var(--primary-color-dark);
+}
+
+
+.playlist-container {
+    max-width: 700px;
+    margin: auto;
+    padding: 1rem;
+    text-align: center;
+}
+
+#subject-title {
+    font-size: 2.5rem;
+    color: var(--primary-color-dark);
+    margin-bottom: 1.5rem;
+}
+
+.playlist-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1.5rem;
+}
+
+.playlist-card {
+    background: var(--secondary-color);
+    padding: 1rem;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.playlist-card:hover {
+    transform: scale(1.05);
+}
+
+.playlist-card img {
+    width: 60%;
+    border-radius: 10px;
+}
+
+.playlist-card h3 {
+    margin-top: 1rem;
+    font-size: 1.2rem;
+    color: var(--text-color);
+}
+
+.watch-btn {
+    margin-top: 10px;
+    padding: 0.6rem 1rem;
+    background: var(--primary-color);
+    color: var(--white);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.watch-btn:hover {
+    background: var(--primary-color-dark);
+}
+
+.add-btn {
+    margin-top: 10px;
+    padding: 0.6rem 1rem;
+    background: var(--primary-color);
+    color: var(--white);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.add-btn:hover {
+    background: var(--primary-color-dark);
+}
+
+

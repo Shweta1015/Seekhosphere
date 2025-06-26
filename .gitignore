@@ -1,0 +1,31 @@
+# ======================
+# 💻 Java & Maven
+# ======================
+*.class
+*.jar
+*.war
+*.log
+*.tmp
+
+# Maven target folder
+/backend/target/
+
+# IDEs
+.idea/
+*.iml
+*.ipr
+*.iws
+.vscode/
+
+# OS junk
+.DS_Store
+Thumbs.db
+
+# ======================
+# 🔐 Sensitive Configuration
+# ======================
+# NEVER push secret properties
+/backend/src/main/resources/application-secret.properties
+
+# Optional: Environment files
+*.env

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SeekhoSphere - Playlists</title>
+    <link rel="stylesheet" href="../Css/playlist.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body onload="fetchPlaylists()">
+    
+    <!-- Navbar -->
+    <nav>
+        <div class="logo">
+            <i class="fas fa-graduation-cap"></i>
+            <h1>SeekhoSphere</h1>
+        </div>
+        <div class="nav__menu" id="menuToggle" onclick="toggleMenu()">
+            <div class="nav__link">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
+        <ul class="nav__links" id="navLinks">
+            <li class="link"><a href="index.html"><i class="fas fa-home"></i> Home</a></li>
+            <li class="link"><a href="Library.html"><i class="fas fa-bookmark"></i> Library</a></li>
+            <li class="link"><a href="chatBot.html"><i class="fa-solid fa-robot"></i> Chatbot</a></li>
+            <li class="link"><a href="AboutUs.html"><i class="fas fa-info-circle"></i> About Us</a></li>
+            <li class="link"><a href="#" class="nav__btn" id="authButton"><i class="fas fa-user-plus"></i> Sign In</a></li>
+        </ul>
+    </nav>
+
+    <!-- Page Content -->
+    <section class="playlist-container">
+        <h2 id="subject-title">Playlists</h2>
+        <div class="playlist-grid" id="playlistGrid">
+            <!-- Playlists will be dynamically loaded here -->
+        </div>
+    </section>
+
+    <!-- Video Section -->
+    <section id="video-player">
+        <div id="videos"></div> <!-- Required for video rendering -->
+    </section>
+
+    <script>
+        function toggleMenu(){
+          let navLinks = document.getElementById("navLinks");
+          navLinks.classList.toggle("active");
+        }
+      </script>
+    <script src="../Jsp/playlist.js"></script>
+    <script src="../Jsp/Auth.js"></script>
+    <script src="../Jsp/index.js"></script>
+</body>
+</html>

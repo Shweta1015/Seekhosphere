@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reset</title>
+    <link rel="stylesheet" href="../Css/ResetPass.css">
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+</head>
+<body>
+    <div class="container">
+        <div class="form-box">
+            <form id="resetForm">
+                <h1>Reset Password</h1>
+                <div class="input-box">
+                   <input type="password" name="pass" id="password" placeholder="New Password" required />
+                   <i class="bx bxs-lock-alt"></i>
+                </div>
+
+                <div class="input-box">
+                   <input type="password" name="pass" id="confirmPassword" placeholder="Confirm Password" required />
+                   <i class="bx bxs-lock-alt"></i>
+                </div>
+                <p id="error-message" style="color: red; margin-bottom: 10px;"></p>
+                <button type="submit" class="btn">Continue</button>
+            </form>
+        </div>
+
+        <div class="toggle-box">
+          <div class="toggle-panel toggle-left">
+            <h1>SeekhoSphere</h1>
+            <p>Reset it...</p>
+          </div>
+        </div>
+    </div>
+     
+    <script src="../Jsp/resetPass.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</body>
+</html>
