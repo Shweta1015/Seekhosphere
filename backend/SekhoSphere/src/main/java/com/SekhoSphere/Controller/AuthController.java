@@ -38,7 +38,6 @@ public class AuthController {
                             loginRequest.getPassword()
                     )
             );
-            System.out.println("Authentication Successful");
             SecurityContextHolder.getContext().setAuthentication(authentication);
 
             //Generate Jwt Token
@@ -47,8 +46,6 @@ public class AuthController {
             //send back the token and user info
             UserDetailsImpl userDetails = (UserDetailsImpl) authentication.getPrincipal();
             String email = userDetails.getUsername();
-
-            System.out.println("Authenticated user's email: " + email);
             return ResponseEntity.ok(new LoginResponse(jwt, "Login successful", email));
         }catch (BadCredentialsException e){
             return ResponseEntity.status(HttpStatus.UNAUTHORIZED)
