@@ -19,7 +19,6 @@ async function fetchLibraryPlaylists() {
       displayPlaylists(playlists);
     }
   } catch (error) {
-    console.error("Failed to fetch library:", error);
     PLAYLIST_CONTAINER.innerHTML = "<p>Error loading library.</p>";
   }
 }
@@ -30,7 +29,6 @@ function displayPlaylists(playlists) {
   playlists.forEach((playlist) => {
   const title = playlist.playlistTitle || "Untitled Playlist";
   const thumbnail = playlist.playlistThumbnail || "https://img.youtube.com/vi/default.jpg";
-  console.log("Fetched playlists from backend:", playlists);
 
     const card = `
       <div class="playlist-card">
