@@ -19,16 +19,13 @@ public class JwtTokenProvider {
     @Value("${jwt.expiration}")
     private int jwtExprirationInMs;
     public String generateToken(Authentication authentication){
-        //debug log to inspect the principal
-        System.out.println("Authentication principal: "+authentication.getPrincipal());
-
+        
         if (!(authentication.getPrincipal() instanceof UserDetailsImpl)){
             throw new IllegalStateException("Expected UserDetailsImpl but got: "+authentication.getPrincipal().getClass().getName());
         }
 
         // Extract the authenticated user's details
         UserDetailsImpl userPrincipal = (UserDetailsImpl) authentication.getPrincipal();
-        System.out.println("Authenticated Username: "+userPrincipal.getUsername());
 
         //set token issue and expiration dates
         Date now = new Date();
