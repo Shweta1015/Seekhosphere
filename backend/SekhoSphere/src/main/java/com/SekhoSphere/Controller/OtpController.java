@@ -47,8 +47,6 @@ public class OtpController {
         String email = requestBody.get("email");
         String otp = requestBody.get("otp");
 
-        log.info("Verifying otp for: {}", email);
-
         Map<String, Object> response = new HashMap<>();
         boolean isVerified = emailService.verifyOtp(email, otp);
 
@@ -57,7 +55,7 @@ public class OtpController {
             response.put("message", "OTP verified successfully");
             return ResponseEntity.ok(response);
         }else {
-            log.warn("Invalid OTP attempt for {}", email);
+            log.warn("Invalid OTP attempt");
             response.put("success", false);
             response.put("message", "Invalid or expired OTP.");
             return ResponseEntity.badRequest().body(response);
@@ -69,7 +67,7 @@ public class OtpController {
         String email = requestBody.get("email");
         String newPassword = requestBody.get("newPassword");
 
-        log.info("Resetting password for {}", email);
+        log.info("Resetting password");
 
         boolean isUpdated = emailService.updatedPassword(email, newPassword);   // Call service to update password
 
