@@ -36,7 +36,7 @@ public class EmailService {
         long expireTime = System.currentTimeMillis() + (5 * 60 * 1000);  //OTP valid for 5 minutes
 
         otpStore.put(email, Pair.of(otp, expireTime));
-        log.info("OTP generated for {}: {}", email, otp);
+        log.info("OTP generated for {}: ", email);
         return otp;
     }
 
@@ -58,18 +58,15 @@ public class EmailService {
     //Method to verify otp
     public boolean verifyOtp(String email, String enteredOtp){
         if (!otpStore.containsKey(email)){
-            log.warn("No OTP found for {}", email);
+            log.warn("No OTP found");
             return false;
         }
         Pair<String, Long> storedData = otpStore.get(email);
         String storedOtp = storedData.getLeft();
         long expireTime = storedData.getRight();
 
-        log.info("Stored OTP for {}: {}", email, storedOtp);
-        log.info("Entered OTP: {}", enteredOtp);
-
         if (System.currentTimeMillis() > expireTime){
-            log.warn("OTP expired for {}", email);
+            log.warn("OTP expired");
             otpStore.remove(email);    //Remove expired OTP
             return false;
         }
@@ -79,7 +76,7 @@ public class EmailService {
             return true;
         }
 
-        log.warn("Incorrect OTP entered for {}", email);
+        log.warn("Incorrect OTP entered ");
         return false;
     }
 
