@@ -29,7 +29,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
       const subject = button.getAttribute("data-subject");
       const level = button.getAttribute("data-level");
-      console.log("Subject: " + subject, "Level: " + level);
 
       if (!token || !(await isTokenValid(token))) {
         Swal.fire({
