@@ -9,9 +9,11 @@ SeekhoSphere is a dynamic and user-friendly e-learning platform designed to simp
 
 ![Screenshot (252)](https://github.com/user-attachments/assets/ae4d6847-74c1-4ccf-b35d-9e39d4903eda)
 
+<img width="1347" height="610" alt="Screenshot (263)" src="https://github.com/user-attachments/assets/87b5455e-2be3-45ac-927d-833b82632a0a" />
+
 
 ## 🔗 Live Demo
-🚀 Explore SeekhoSphere live at: 🌐 https://your-deployed-url.com
+🚀 Explore SeekhoSphere live at: 🌐 Soon!
 
 
 ## ✨ Key Features:
